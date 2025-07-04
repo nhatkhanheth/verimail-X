@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Email Verify for X",
+  "version": "1.0",
+  "description": "Ấn Ctrl+Shift+U để lấy mã xác thực từ mail.tm và nhập tự động",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://api.mail.tm/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html" },
+  "commands": {
+    "trigger-email-verify": {
+      "suggested_key": { "default": "Ctrl+Shift+U" },
+      "description": "Lấy code mail và nhập vào X"
+    }
+  }
+}
